@@ -33,6 +33,7 @@ public class SpawnZombies : MonoBehaviour
         if (CountZombies == 0)
         {
             _countWave++;
+            FindObjectOfType<ScoreWave>().UIWave(_countWave); 
             Spawn(_countWave);
         }
     }
