@@ -11,7 +11,7 @@ public class MoveController : MonoBehaviour
 
     public void Death()
     {
-        Destroy(gameObject);
+        FindObjectOfType<YouLose>().Lose();
     }
     private void Start()
     {
@@ -25,12 +25,6 @@ public class MoveController : MonoBehaviour
     private void FixedUpdate()
     {
         Move();
-        RotationPlayer();
-    }
-
-    private void RotationPlayer()
-    {
-
     }
     private void Move()
     {
